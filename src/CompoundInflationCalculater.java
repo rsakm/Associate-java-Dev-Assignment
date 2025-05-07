@@ -40,7 +40,8 @@ public class CompoundInflationCalculater {
             double compoundedInflation = calculateCompoundedInflation(rate, years);
 
             DecimalFormat df = new DecimalFormat("#.##");
-            System.out.println("Compounded retail inflation after " + years + " years is: " + df.format(compoundedInflation) + "%");
+
+            System.out.printf("Compounded retail inflation after %d years is: %d%%%n", years, Math.round(compoundedInflation));
 
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter numeric values.");
